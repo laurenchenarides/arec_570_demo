@@ -81,6 +81,18 @@ Repository for AREC 570 GitHub Version Control Demo.
 5. Go to your GitHub repo and refresh the page to confirm that it was uploaded.
 
 
+### Best practices
+
+1. Use pull requests if collaborating with others.
+
+- When collaborating with others, always create a pull request to propose changes. This allows team members to review, discuss, and approve changes before merging them into the main branch. This process helps maintain code quality and prevent conflicts.
+
+2. Commit frequently with descriptive messages.
+
+- Make small, frequent commits with clear, descriptive messages about the changes you’ve made. This practice makes it easier to track changes, troubleshoot issues, and understand the project's history.
+
+
+
 ### Helpful terminal commands
 
 - Clear Workspace: Open RStudio, and in the Terminal window, type the following to ensure your working directory is clean:  **`git stash`**
