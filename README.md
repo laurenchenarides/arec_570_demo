@@ -103,3 +103,12 @@ Repository for AREC 570 GitHub Version Control Demo.
   - **`git add –A`** 
   - **`git commit -m "Describe your updates here"`**
   - **`git push -u origin main`**
+
+
+### References
+
+Battiston and Gars, 2021. Git for Research in Economics. https://leap.unibocconi.eu/sites/default/files/media/attach/LEAPgit_handout.pdf. <br>
+
+Riffomonas Project, 2021. Connecting an existing Rstudio project to git and GitHub. https://youtu.be/bUoN85QvC10?si=7RlU-79VyowqlOrb. <br>
+
+Sostero, 2018. Git better: Collaborative project management using Git and GitHub. https://matteosostero.com/files/slides_git.pdf. <br>
