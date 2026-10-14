@@ -26,3 +26,10 @@ including things that did not make it into the code.
   and cap 30 C. These are illustrative; a paper would justify each one.
 - Open question: the gauge is downstream of diversions, so low flow reflects
   water use as well as weather. Note this in the data section.
+
+## 2026-10-27
+
+- Wrote the codebook and a draft data section. Every number in the draft is
+  taken from `output/tables/`, so rerunning `run_all.R` shows whether the text
+  is still correct.
+- The ACS tables appear only after a run with a Census key.

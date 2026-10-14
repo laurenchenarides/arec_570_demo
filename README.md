@@ -27,6 +27,8 @@ example
 3. Work with others through issues, branches, and pull requests:
    [docs/collaboration.md](docs/collaboration.md)
 4. Browse the APIs economists use: [docs/api-catalog.md](docs/api-catalog.md)
+5. Report the data: [docs/codebook.md](docs/codebook.md) and a draft data
+   section built from this project's outputs, [docs/data-section.md](docs/data-section.md)
 
 ## Reproduce the project
 
@@ -82,3 +84,15 @@ Sciences*:
 - Paths are relative to the project root, so the project runs on any computer.
 - Numbers show the order of scripts; each folder's README lists inputs and outputs.
 - Credentials and data stay out of Git; the retrieval log and code stay in.
+
+## Data sources
+
+| Source | Provider | Access | Retrieved |
+|---|---|---|---|
+| Cropland Data Layer, 2024 | USDA National Agricultural Statistics Service | CropScape API via `CropScapeR` | see `data/retrieval_log.csv` |
+| Daily discharge, site 06752260 | U.S. Geological Survey | Water Data API via `dataRetrieval` | see log |
+| Daily weather, AG community | NASA POWER | POWER API via `nasapower` | see log |
+| ACS 2020-2024 five-year, table B19013 | U.S. Census Bureau | Census API via `tidycensus` (key required) | see log |
+
+All four sources are public. The analysis files are rebuilt from them by
+`run_all.R`; raw files are not redistributed here.
