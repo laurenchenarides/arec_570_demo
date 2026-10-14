@@ -1,0 +1,4 @@
+retrieved,source,request,file,rows,package,r_version
+2026-10-14 13:53 MDT,USDA NASS Cropland Data Layer (CropScape),"GetCDLStat(aoi = '08069', year = 2024, type = 'f')",data/raw/cdl_larimer_2024_acres.csv,35,CropScapeR 1.1.5,4.6.1
+2026-10-14 13:53 MDT,"USGS Water Data API, daily values","read_waterdata_daily('USGS-06752260', parameter_code = '00060', time = 2024-04-01 to 2024-09-30)",data/raw/usgs_poudre_flow_2024.csv,183,dataRetrieval 2.7.26,4.6.1
+2026-10-14 13:53 MDT,"NASA POWER, daily, AG community","get_power(lonlat = c(-105.08, 40.58), pars = T2M_MAX, T2M_MIN, PRECTOTCORR, 2024-04-01 to 2024-09-30)",data/raw/power_fort_collins_2024.csv,183,nasapower 4.3.0,4.6.1
