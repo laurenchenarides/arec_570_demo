@@ -1,0 +1,6 @@
+step,days
+Streamflow days returned (daily mean),183
+Weather days returned,183
+Days in either source (full join),183
+Days in both sources,183
+Days with no missing flow or weather values,183
