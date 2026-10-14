@@ -1,0 +1,6 @@
+# Use LF line endings on every operating system. R writes LF, so this keeps
+# rerun output from showing as "modified" on Windows when nothing changed.
+* text=auto eol=lf
+*.png binary
+*.tif binary
+*.gpkg binary
