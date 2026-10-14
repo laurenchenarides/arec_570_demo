@@ -83,7 +83,7 @@ GitHub offers two ways to copy someone else's repository into your account.
 
 | | Fork | Template |
 |---|---|---|
-| History | Keeps every commit and tag from the original | Starts a new history with one commit |
+| History | Keeps every commit; keeps tags and branches when you uncheck **Copy the main branch only** | Starts a new history with one commit |
 | Link to the original | Yes: you can pull later updates and propose changes back | None |
 | Visibility | Public when the original is public | Your choice, public or private |
 | Use it for | Following a project that keeps changing; contributing to someone else's code | Starting your own project from a standard layout |
@@ -96,7 +96,8 @@ repository (Part Four).
 ### Steps
 
 1. Open <https://github.com/laurenchenarides/arec_570_demo> and select
-   **Fork** (top right), then **Create fork**.
+   **Fork** (top right). **Uncheck Copy the main branch only** so the fork
+   includes the tag for each lecture, then select **Create fork**.
 2. On your fork, select the green **Code** button and copy the HTTPS URL.
 3. In RStudio: **File > New Project > Version Control > Git**. Paste the URL,
    choose where the folder should live, and select **Create Project**.
