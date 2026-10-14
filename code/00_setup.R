@@ -27,18 +27,5 @@ for (d in c("data/raw", "data/derived", "output/figures", "output/tables")) {
   dir.create(d, recursive = TRUE, showWarnings = FALSE)
 }
 
-# Retrieval log -----------------------------------------------------------------
-# One row per API request. The log is tracked by Git; the raw files are not.
-log_retrieval <- function(source, request, file, rows, package) {
-  entry <- data.frame(
-    retrieved = format(Sys.time(), "%Y-%m-%d %H:%M %Z"),
-    source    = source,
-    request   = request,
-    file      = file,
-    rows      = rows,
-    package   = paste(package, packageVersion(package)),
-    r_version = paste(R.version$major, R.version$minor, sep = ".")
-  )
-  log_file <- "data/retrieval_log.csv"
-  write_csv(entry, log_file, append = file.exists(log_file))
-}
+# Helper functions: log_retrieval(), check_key() --------------------------------
+source("code/functions.R")

@@ -24,7 +24,9 @@ example
 1. Set up Git and GitHub in RStudio: [docs/setup-rstudio.md](docs/setup-rstudio.md)
 2. Learn the everyday Git loop: [docs/git-in-rstudio.md](docs/git-in-rstudio.md)
    (VS Code users: [docs/vscode.md](docs/vscode.md))
-3. Browse the APIs economists use: [docs/api-catalog.md](docs/api-catalog.md)
+3. Work with others through issues, branches, and pull requests:
+   [docs/collaboration.md](docs/collaboration.md)
+4. Browse the APIs economists use: [docs/api-catalog.md](docs/api-catalog.md)
 
 ## Reproduce the project
 
@@ -52,11 +54,14 @@ arec_570_demo/
 ├── arec_570_demo.Rproj    opens the project with the right working directory
 ├── run_all.R              runs every script in order
 ├── code/                  numbered scripts; see code/README.md
-│   ├── 00_setup.R
-│   ├── 01_get_cdl.R
+│   ├── 00_setup.R         settings and folders
+│   ├── functions.R        log_retrieval(), check_key()
+│   ├── 01_get_cdl.R       retrieve
 │   ├── 02_get_streamflow.R
 │   ├── 03_get_weather.R
-│   └── 04_get_acs.R
+│   ├── 04_get_acs.R
+│   ├── 05_build_daily.R   join by date, check keys, build measures
+│   └── 06_outputs.R       figures and tables
 ├── data/                  see data/README.md
 │   ├── raw/               API responses, never edited (not in Git)
 │   ├── derived/           built by code (not in Git)
@@ -65,6 +70,7 @@ arec_570_demo/
 │   ├── figures/
 │   └── tables/
 ├── docs/                  guides and the API catalog
+├── .github/               issue template for research tasks
 └── lab_diary.md           dated notes on what was tried and why
 ```
 

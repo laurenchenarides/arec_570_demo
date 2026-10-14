@@ -16,3 +16,13 @@ including things that did not make it into the code.
 - NASA POWER describes a grid cell of roughly 0.5° x 0.625°, not Fort Collins
   itself. The same weather values apply to every location in the cell.
 - Next: combine flow and weather by date and check the key (Lecture 5.4).
+
+## 2026-10-15
+
+- Joined flow and weather by date. Both sources return all 183 days, so the
+  one-to-one join keeps every day. `check_key()` now runs before every join.
+- Thresholds: heat day at 35 C (the lecture example), low flow below 20 cfs
+  (about the 20th percentile this season), growing degree days with base 10 C
+  and cap 30 C. These are illustrative; a paper would justify each one.
+- Open question: the gauge is downstream of diversions, so low flow reflects
+  water use as well as weather. Note this in the data section.
