@@ -1,4 +1,8 @@
+# RStudio
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Credentials: API keys live in your user-level .Renviron, never in the project
+.Renviron
