@@ -6,3 +6,12 @@
 
 # Credentials: API keys live in your user-level .Renviron, never in the project
 .Renviron
+
+# Data: rebuilt by run_all.R; archive raw files outside Git (see data/README.md)
+data/raw/
+data/derived/
+
+# Editors and operating systems
+.vscode/
+.DS_Store
+Thumbs.db
