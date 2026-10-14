@@ -13,58 +13,61 @@ commit. The status column shows what happened to each file:
 | **A** | Added: new file, staged for its first commit |
 | **D** | Deleted |
 | **R** | Renamed or moved |
-| **?** | Untracked: Git has never recorded this file |
+| **?** | Untracked: a file Git has not yet recorded |
 
 Buttons along the top: **Diff** and **Commit** open the review window; **Pull**
 (blue down arrow) brings in changes from GitHub; **Push** (green up arrow)
-sends your commits to GitHub; **History** (clock) shows every past commit; the
-branch menu on the right shows which branch you are on.
+sends your commits to GitHub; **History** (clock) lists past commits; the
+branch menu on the right shows the current branch.
 
 ## The everyday loop
 
 1. **Pull** before you start, so you build on the latest version.
-2. Make one coherent change: fix one variable definition, add one script.
-3. Select **Diff**. Read every changed line (red removed, green added).
-4. Check **Staged** for the files that belong to this change, and only those.
+2. Make one coherent change, such as fixing one variable definition or adding
+   one script.
+3. Select **Diff** and read each changed line (red lines were removed, green
+   lines were added).
+4. Check **Staged** for the files that belong to this change.
 5. Write a commit message, then select **Commit**.
-6. **Push** when you want the commits on GitHub (at least once per session).
+6. **Push** to copy your commits to GitHub, at least once per work session.
 
-A commit is a checkpoint you can return to. Commit when something works or
-when you finish a step you would want to explain.
+Each commit is a checkpoint you can return to. Commit when a step works, or
+when you finish a step you would want to explain to a coauthor.
 
 ## Commit messages
 
-The first line says what the commit does, in about 50 characters, written as a
-command: "Add daily weather retrieval," not "added stuff." Add a blank line
-and a short paragraph when the reason is not obvious, especially when the
-change affects the sample or the meaning of a variable.
+Write the first line as an instruction that describes the commit, in about 50
+characters, for example "Add daily weather retrieval." When the reason for the
+change is not obvious, add a blank line and a short paragraph. This matters
+most when a change alters the sample or the meaning of a variable.
 
-| Weak | Better |
+| Vague | Specific |
 |---|---|
-| `updates` | `Treat suppressed ACS estimates as missing, not zero` |
-| `fixed bug` | `Keep FIPS codes as text so leading zeros survive` |
+| `updates` | `Code suppressed ACS estimates as missing` |
+| `fixed bug` | `Keep FIPS codes as text to preserve leading zeros` |
 | `final version` | `Restrict sample to the April-September growing season` |
 
-Browse this repository's history (**History** button, or *Commits* on GitHub)
-for more examples.
+The **History** button (or *Commits* on GitHub) shows more examples from this
+repository.
 
-## Keep things out of the repository
+## Keep files out of the repository
 
-`.gitignore` lists files Git should never offer to stage. This project ignores:
+`.gitignore` lists files that Git leaves out of the Git pane. This project
+excludes:
 
 - `.Renviron`: API keys and other credentials
 - `data/raw/` and `data/derived/`: large, restricted, or rebuildable data
-- RStudio's own session files (`.Rproj.user`, `.Rhistory`, `.RData`)
+- RStudio session files (`.Rproj.user`, `.Rhistory`, `.RData`)
 
-`.gitignore` only affects files Git has never tracked. If you committed a file
-by mistake, stop tracking it in the **Terminal** tab, then commit:
+`.gitignore` applies to files Git has not yet tracked. To stop tracking a file
+that was already committed, run this in the **Terminal** tab and then commit:
 
 ```bash
 git rm --cached path/to/file
 ```
 
-If the file contained a password or key, revoke the key with the provider.
-The old value remains in the history.
+If the file contained a password or key, revoke the key with the provider,
+because earlier commits still contain it.
 
 ## Undo
 
@@ -73,22 +76,22 @@ The old value remains in the history.
 | Discard uncommitted edits to a file | Select the file in **Diff**, then **Revert** |
 | Unstage a file | Uncheck **Staged** |
 | See an earlier version | **History**, select the commit, then **View file** |
-| Fix the message of the last commit (not yet pushed) | Check **Amend previous commit** in the Commit window |
+| Reword the last commit before pushing | Check **Amend previous commit** in the Commit window |
 
-## Look at a stage of this project
+## Open a stage of this project
 
-Each lecture's version of this project is tagged. In the **Terminal**:
+A tag marks each lecture's version of this project. In the **Terminal**:
 
 ```bash
 git tag                          # list the stages
-git switch --detach 5.2-retrieve # look around (read only)
-git switch main                  # come back
+git switch --detach 5.2-retrieve # open the Lecture 5.2 version (read only)
+git switch main                  # return to the current version
 ```
 
 ## Terminal equivalents
 
-RStudio's buttons run ordinary Git commands. The same commands work in any
-terminal and in VS Code.
+Each RStudio button runs a Git command. The same commands work in any terminal
+and in VS Code.
 
 | RStudio | Terminal |
 |---|---|

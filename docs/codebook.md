@@ -15,18 +15,19 @@
 | `precip_mm` | numeric | mm/day | Bias-corrected precipitation, same grid cell | POWER `PRECTOTCORR` |
 | `heat_day` | logical | | `tmax_c` ≥ 35 | constructed |
 | `low_flow` | logical | | `flow_cfs` < 20 | constructed |
-| `gdd` | numeric | °C-days | Growing degree days: (min(`tmax_c`, 30) + max(`tmin_c`, 10)) / 2 − 10, floored at 0 | constructed |
+| `gdd` | numeric | °C-days | Growing degree days: (min(`tmax_c`, 30) + max(`tmin_c`, 10)) / 2 - 10, floored at 0 | constructed |
 
 **Missing values:** none in 2024. A missing `flow_cfs` would mean USGS
-reported no daily value (for example, ice or equipment failure), not zero
-flow. Missing values are left as `NA`, never replaced with 0.
+reported no daily value (for example, because of ice or equipment failure).
+Missing values remain `NA` in the file, which keeps them distinct from a
+measured flow of zero.
 
 **Thresholds** are set at the top of `05_build_daily.R` and are illustrative.
 
 # Codebook: `data/raw/acs_larimer_tracts_2024.gpkg`
 
 **Unit:** census tract (2020 boundaries), Larimer County, for the five-year
-period 2020–2024. **Key:** `GEOID` (11-character text: state, county, tract).
+period 2020-2024. **Key:** `GEOID` (11-character text: state, county, tract).
 
 | Variable | Definition |
 |---|---|

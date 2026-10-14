@@ -102,7 +102,7 @@ the ARMS API.
 - State agencies: water rights, land records, licensing
 - Commercial scanner and point-of-sale data, under license
 
-A download script should still record the URL, the file, and the download date.
+A download script records the URL, the file, and the download date.
 
 ## Services that changed recently
 
@@ -113,5 +113,5 @@ A download script should still record the URL, the file, and the download date.
 - USGS plans to retire the services behind `dataRetrieval`'s `readNWIS`
   functions in 2027. Use the `read_waterdata_*` functions.
 
-Save raw responses and retrieval dates. A script alone may not reproduce the
-data next year.
+Save raw responses with their retrieval dates so the data can be reproduced
+after a service changes.

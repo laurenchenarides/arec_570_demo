@@ -4,7 +4,7 @@
 .RData
 .Ruserdata
 
-# Credentials: API keys live in your user-level .Renviron, never in the project
+# Credentials: API keys belong in your user-level .Renviron, outside the project
 .Renviron
 
 # Data: rebuilt by run_all.R; archive raw files outside Git (see data/README.md)

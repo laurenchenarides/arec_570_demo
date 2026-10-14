@@ -2,8 +2,8 @@
 
 | Folder or file | Contents | In Git? |
 |---|---|---|
-| `raw/` | Files exactly as returned by each API. Never edited by hand. | No |
-| `derived/` | Files built from `raw/` by code. Delete and rerun to rebuild. | No |
+| `raw/` | Files exactly as returned by each API, left unedited | No |
+| `derived/` | Files built from `raw/` by code; rerun to rebuild | No |
 | `retrieval_log.csv` | One row per API request: date, request, file, rows, package version | Yes |
 
 Raw and derived data are excluded by `.gitignore`. The land-cover raster alone

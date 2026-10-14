@@ -65,8 +65,8 @@ arec_570_demo/
 │   ├── 05_build_daily.R   join by date, check keys, build measures
 │   └── 06_outputs.R       figures and tables
 ├── data/                  see data/README.md
-│   ├── raw/               API responses, never edited (not in Git)
-│   ├── derived/           built by code (not in Git)
+│   ├── raw/               API responses as returned (excluded from Git)
+│   ├── derived/           files built by code (excluded from Git)
 │   └── retrieval_log.csv  what was downloaded, when, and how
 ├── output/
 │   ├── figures/
@@ -83,7 +83,7 @@ Sciences*:
 - One script, `run_all.R`, reproduces the project from start to finish.
 - Paths are relative to the project root, so the project runs on any computer.
 - Numbers show the order of scripts; each folder's README lists inputs and outputs.
-- Credentials and data stay out of Git; the retrieval log and code stay in.
+- Git tracks code, documentation, and the retrieval log. `.gitignore` excludes credentials and data.
 
 ## Data sources
 
@@ -94,5 +94,5 @@ Sciences*:
 | Daily weather, AG community | NASA POWER | POWER API via `nasapower` | see log |
 | ACS 2020-2024 five-year, table B19013 | U.S. Census Bureau | Census API via `tidycensus` (key required) | see log |
 
-All four sources are public. The analysis files are rebuilt from them by
-`run_all.R`; raw files are not redistributed here.
+All four sources are public. `run_all.R` rebuilds the analysis files from
+them, so the repository holds code and documentation only.

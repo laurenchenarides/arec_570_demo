@@ -19,7 +19,7 @@ season        <- c("2024-04-01", "2024-09-30")
 data_year     <- 2024
 
 # Re-download only when asked. Otherwise the scripts reuse the raw files on disk,
-# so a rerun reproduces the archived data rather than whatever the API returns today.
+# so a rerun reproduces the archived data.
 if (!exists("refresh")) refresh <- FALSE
 
 # Folders -----------------------------------------------------------------------

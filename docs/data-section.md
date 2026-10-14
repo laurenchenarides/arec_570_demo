@@ -18,14 +18,14 @@ from NASA's Prediction Of Worldwide Energy Resources (POWER) service, which
 reports MERRA-2 reanalysis values for a grid cell of about 0.5° × 0.625°
 containing Fort Collins. Land cover comes from the USDA National Agricultural
 Statistics Service 2024 Cropland Data Layer (CDL) for Larimer County. Tract
-median household income comes from the American Community Survey 2020–2024
+median household income comes from the American Community Survey 2020-2024
 five-year estimates (table B19013).
 
 **Unit of observation and sample.** The analysis file has one row per day
-from April 1 to September 30, 2024. The key is the date. Both the streamflow
+from April 1 to September 30, 2024, and the date is the key. Both the streamflow
 and the weather series return all 183 days; a one-to-one join on date retains
 all 183, with no missing values (Table 1). The streamflow series describes one
-point on the river; the weather series describes a grid cell, so the same
+point on the river. The weather series describes a grid cell, and the same
 values apply to every location within it.
 
 *Table 1. Sample construction*
@@ -56,11 +56,11 @@ area; corn, the largest cultivated class, covers 0.8 percent
 imagery, and accuracy varies by crop and region.
 
 **Limitations.** First, USGS revised 72 of the 183 daily discharge values
-after first publishing them; all values are now approved, but a download made
+after first publishing them. All values are now approved, and a download made
 during the 2024 season would differ from ours. We therefore archive the raw
 responses with their retrieval date. Second, the gauge lies downstream of
 irrigation diversions, so low flow reflects water use as well as weather.
-Third, grid-cell weather does not capture variation within the cell. Fourth,
+Third, grid-cell weather averages over variation within the cell. Fourth,
 ACS estimates describe a five-year period, carry margins of error, and are
 reported for 2020 tract boundaries.
 
@@ -72,6 +72,6 @@ reported for 2020 tract boundaries.
 - [x] Unit of observation and key
 - [x] Sample construction with counts at each step
 - [x] Variable definitions, units, and thresholds
-- [x] Missing values distinguished from zeros
+- [x] Missing values coded separately from zeros
 - [x] Merges: identifiers, expected relationship, unmatched records
 - [x] Limitations a reader could not infer from the tables
