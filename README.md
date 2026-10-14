@@ -26,7 +26,8 @@ example
    (VS Code users: [docs/vscode.md](docs/vscode.md))
 3. Work with others through issues, branches, and pull requests:
    [docs/collaboration.md](docs/collaboration.md)
-4. Browse the APIs economists use: [docs/api-catalog.md](docs/api-catalog.md)
+4. Browse the APIs economists use: [docs/api-catalog.md](docs/api-catalog.md),
+   and draft your own [data plan](docs/data-plan.md)
 5. Report the data: [docs/codebook.md](docs/codebook.md) and a draft data
    section built from this project's outputs, [docs/data-section.md](docs/data-section.md)
 
@@ -36,7 +37,7 @@ example
 
    ```r
    install.packages(c("CropScapeR", "dataRetrieval", "nasapower", "tidycensus",
-                      "dplyr", "readr", "ggplot2", "sf", "terra"))
+                      "ggplot2", "dplyr", "readr", "sf"))
    ```
 
 2. Get a free Census key at <https://api.census.gov/data/key_signup.html>.

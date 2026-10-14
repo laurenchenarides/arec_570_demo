@@ -1,7 +1,7 @@
 # Setting up Git and GitHub in RStudio
 
-Complete Parts One through Three before Lecture 5.3. Part Four is for your own
-research project.
+Complete Parts One and Two before Lecture 5.3. We will complete Part Three
+together in class. Part Four is for your own research project.
 
 ## Part One: Install Git and connect RStudio to GitHub
 
