@@ -97,3 +97,9 @@ Sciences*:
 
 All four sources are public. `run_all.R` rebuilds the analysis files from
 them, so the repository holds code and documentation only.
+
+## Acknowledgement
+
+Lauren Chenarides developed this repository with assistance from Claude
+(Anthropic), an AI model, which drafted code, documentation, and figures under
+her direction. She is responsible for the content.
